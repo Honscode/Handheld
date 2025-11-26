@@ -33,5 +33,5 @@ bool PinModule::isButtonPressed(const PinModule::GamePadPins& pins, Button butto
         default:
             return false; // Invalid button
     }
-    return digitalRead(pinToCheck) == HIGH;
+    return digitalRead(pinToCheck) == LOW;
 }

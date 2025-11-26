@@ -5,11 +5,10 @@
 
 PinModule::GamePadPins flappyBirdControls = {31, 33, 35, 37};
 Bird bird(flappyBirdControls);
+Pipe pipe;
 
 class FlappyBird : public GameManager
 {
-private:
-
 public:
     FlappyBird() {}
     void start() override
@@ -19,6 +18,12 @@ public:
     void update() override
     {
         bird.update();
+        pipe.update();
+    }
+    void draw(Adafruit_GFX& display) override
+    {
+        bird.draw(display);
+        pipe.draw(display);
     }
     void reset() override
     {

@@ -1,11 +1,12 @@
-#include <Arduino.h>
+#pragma once
+#include <Arduino.h>// Arduino library for microcontroller functions
+#include "PinModule.h"//would be use for every app to handle input
 
 class GameManager
 {
 private:
     
 public:
-    GameManager();
     // Lifecycle methods and some can be unused in some games
     virtual void start(){};
     virtual void update(){};
@@ -14,5 +15,4 @@ public:
     virtual void pause(){};
     virtual void stop(){};
 
-    ~GameManager();
 };
